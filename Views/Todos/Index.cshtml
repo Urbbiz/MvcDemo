@@ -1,0 +1,26 @@
+﻿@model List<TodoItem>
+
+<h3>Todos</h3>
+
+@if (!Model.Any())
+{
+    <h3> There is nothing</h3>
+}
+else
+{
+   <table class ="table">
+        <tr>
+            <td>Id</td>
+            <td>Description</td>
+        </tr>
+
+        @foreach (TodoItem item in Model)
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.Description</td>
+            </tr>
+        }
+    </table> 
+}
+
